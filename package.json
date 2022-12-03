@@ -7,5 +7,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hnatiukr/aoc-2022.git"
-  }
+  },
+  "type": "module"
 }
