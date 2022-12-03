@@ -6,8 +6,29 @@ const input = fs.readFileSync(
   'utf-8'
 );
 
-const findMostCalories = (bestOf = 1) => {
-  const calories = input.split('\n');
+const part1 = (values = '') => {
+  const calories = values.split('\n');
+
+  let count = 0;
+  let sum = 0;
+
+  calories.forEach((cal) => {
+    if (cal) {
+      count += Number.parseInt(cal);
+    } else {
+      if (count > sum) {
+        sum = count;
+      }
+
+      count = 0;
+    }
+  });
+
+  console.log(sum);
+};
+
+const part2 = (values = '') => {
+  const calories = values.split('\n');
 
   let count = 0;
   const top = [];
@@ -24,11 +45,11 @@ const findMostCalories = (bestOf = 1) => {
 
   const mostCalories = top
     .sort()
-    .slice(-1 * bestOf)
+    .slice(-1 * 3)
     .reduce((sum, cal) => (sum += cal), 0);
 
   console.log(mostCalories);
 };
 
-findMostCalories(1);
-findMostCalories(3);
+part1(input);
+part2(input);
