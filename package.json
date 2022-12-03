@@ -1,0 +1,11 @@
+{
+  "name": "aoc-2022",
+  "version": "0.0.1",
+  "description": "Solving Advent of Code 2022 in JavaScript",
+  "author": "Roman Hnatiuk <hnatiukr@pm.me>",
+  "homepage": "https://github.com/hnatiukr/aoc-2022#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hnatiukr/aoc-2022.git"
+  }
+}
