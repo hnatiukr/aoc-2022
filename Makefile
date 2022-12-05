@@ -14,6 +14,7 @@ create:
 	touch day/${day}/index.ts day/${day}/input.txt day/${day}/README.md
 
 debug:
+	rm -rf debug
 	mkdir debug
 	npx tsc --module node16 --outDir debug day/$(day)/index.ts
 	cp ./day/$(day)/input.txt ./debug/day/$(day)
