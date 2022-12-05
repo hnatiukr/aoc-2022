@@ -1,4 +1,4 @@
-import { readInput } from '../../read-input.js';
+import { readInput } from '../../utils.js';
 
 type Calories = string[];
 
