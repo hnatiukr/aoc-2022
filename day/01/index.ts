@@ -1,14 +1,8 @@
-import fs from 'fs';
-import path from 'path';
+import { readInput } from '../../read-input.js';
 
-const input = fs.readFileSync(
-  path.resolve(process.cwd(), './day/01/input.txt'),
-  'utf-8'
-);
+type Calories = string[];
 
-const part1 = (values = '') => {
-  const calories = values.split('\n');
-
+function part1(calories: Calories): void {
   let count = 0;
   let sum = 0;
 
@@ -25,13 +19,12 @@ const part1 = (values = '') => {
   });
 
   console.log(sum);
-};
+}
 
-const part2 = (values = '') => {
-  const calories = values.split('\n');
-
+function part2(calories: Calories): void {
   let count = 0;
-  const top = [];
+
+  const top: Array<number> = [];
 
   calories.forEach((cal) => {
     if (cal) {
@@ -49,7 +42,10 @@ const part2 = (values = '') => {
     .reduce((sum, cal) => (sum += cal), 0);
 
   console.log(mostCalories);
-};
+}
 
-part1(input);
-part2(input);
+const input = readInput('01');
+const calories: Calories = input.split('\n');
+
+part1(calories);
+part2(calories);
