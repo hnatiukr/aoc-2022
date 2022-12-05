@@ -47,7 +47,7 @@ Now that you're correctly decrypting the ultra top secret strategy guide, you wo
 Following the Elf's instructions for the second column, what would your total score be if everything goes exactly according to your strategy guide?
 
 ``` console
-node day/02
+make run day=02
 14069
 12411
 ```

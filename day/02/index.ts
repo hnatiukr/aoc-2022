@@ -1,16 +1,8 @@
-import fs from 'fs';
-import path from 'path';
+import { readInput, match } from '../../utils.js';
 
-const input = fs.readFileSync(
-  path.resolve(process.cwd(), './day/02/input.txt'),
-  'utf-8'
-);
+type Scores = string[];
 
-const match = (value) => (matcher) => matcher[value]();
-
-const part1 = (values = '') => {
-  const scores = values.split('\n');
-
+const part1 = (scores: Scores) => {
   let total = 0;
 
   for (let index = 0; index < scores.length; index += 1) {
@@ -36,9 +28,7 @@ const part1 = (values = '') => {
   console.log(total);
 };
 
-const part2 = (values = '') => {
-  const scores = values.split('\n');
-
+const part2 = (scores: Scores) => {
   let total = 0;
 
   for (let index = 0; index < scores.length; index += 1) {
@@ -64,5 +54,8 @@ const part2 = (values = '') => {
   console.log(total);
 };
 
-part1(input);
-part2(input);
+const input = readInput('02');
+const scores: Scores = input.split('\n');
+
+part1(scores);
+part2(scores);
