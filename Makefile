@@ -9,4 +9,8 @@ build:
 run:
 	node build/day/$(day)
 
-.PHONY: build run
+create:
+	mkdir day/${day}
+	touch day/${day}/index.ts day/${day}/input.txt day/${day}/README.md
+
+.PHONY: build run create
