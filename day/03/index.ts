@@ -1,32 +1,28 @@
-import { resolve } from 'path';
-import { readFileSync } from 'fs';
+import { readInput } from '../../utils.js';
 
-const input = readFileSync(
-  resolve(process.cwd(), './day/03/input.txt'),
-  'utf-8'
-);
+type Rucksack = string[];
 
-const a_ZPriority = (character = 'a') => {
-  const a_Z = [];
+const a_ZPriority = (character: string): number => {
+  const a_Z: string[] = [];
 
-  for (let index = 'a'.charCodeAt(); index <= 'z'.charCodeAt(); index += 1) {
+  for (let index = 'a'.charCodeAt(0); index <= 'z'.charCodeAt(0); index += 1) {
     a_Z.push(String.fromCharCode(index));
   }
 
-  for (let index = 'A'.charCodeAt(); index <= 'Z'.charCodeAt(); index += 1) {
+  for (let index = 'A'.charCodeAt(0); index <= 'Z'.charCodeAt(0); index += 1) {
     a_Z.push(String.fromCharCode(index));
   }
 
   return a_Z.indexOf(character) + 1;
 };
 
-const findCommonCharacter = (...parts) => {
+function findGenericSymbol(...parts: string[]): string {
   const sortedByLength = parts.sort((a, b) => b.length - a.length);
 
   const longerPart = sortedByLength[0];
   const restParts = sortedByLength.slice(1);
 
-  let commonCharacter;
+  let genericSymbol;
 
   for (let itemIndex = 0; itemIndex < longerPart.length; itemIndex += 1) {
     const item = longerPart[itemIndex];
@@ -42,33 +38,35 @@ const findCommonCharacter = (...parts) => {
     }
 
     if (expectedHits === 0) {
-      commonCharacter = item;
+      genericSymbol = item;
     }
   }
 
-  return commonCharacter;
-};
+  if (!genericSymbol) {
+    throw ReferenceError('Generic symbol not defined');
+  }
 
-const part1 = (values = input) => {
-  const rucksack = values.split('\n');
+  return genericSymbol;
+}
 
+//
+
+function part1(rucksack: Rucksack): void {
   let sumOfPriorities = 0;
 
   for (let index = 0; index < rucksack.length; index += 1) {
     const supply = rucksack[index];
     const first = supply.slice(0, supply.length / 2);
     const second = supply.slice(supply.length / 2);
-    const commonChar = findCommonCharacter(first, second);
+    const commonChar = findGenericSymbol(first, second);
 
     sumOfPriorities += a_ZPriority(commonChar);
   }
 
   console.log(sumOfPriorities);
-};
+}
 
-const part2 = (values = '') => {
-  const rucksack = values.split('\n');
-
+function part2(rucksack: Rucksack): void {
   const groups = [];
   let group = [];
 
@@ -89,13 +87,18 @@ const part2 = (values = '') => {
   let sumOfPriorities = 0;
 
   for (let index = 0; index < groups.length; index += 1) {
-    const commonCharacter = findCommonCharacter(...groups[index]);
+    const genericSymbol = findGenericSymbol(...groups[index]);
 
-    sumOfPriorities += a_ZPriority(commonCharacter);
+    sumOfPriorities += a_ZPriority(genericSymbol);
   }
 
   console.log(sumOfPriorities);
-};
+}
 
-part1(input);
-part2(input);
+//
+
+const input = readInput('03');
+const rucksack: Rucksack = input.split('\n');
+
+part1(rucksack);
+part2(rucksack);
