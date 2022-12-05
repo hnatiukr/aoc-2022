@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "target": "es2016",
+    "module": "node16",
+    "moduleResolution": "nodenext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+
+    "baseUrl": ".",
+    "outDir": "build",
+
+    "noEmit": false,
+    "declaration": false,
+    "resolveJsonModule": false,
+
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  },
+
+  "include": ["*.ts", "day/**/*.ts"],
+  "exclude": ["node_modules/**/*", "**/node_modules", "build/**/*", "**/build/"]
+}

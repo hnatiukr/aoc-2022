@@ -1,5 +1,25 @@
-# Solving AoC 2022 problems in JavaScript
+# Solving AoC 2022 problems in TypeScript
 
-![Logo](https://github.com/hnatiukr/aoc-2022/blob/main/images/aoc2022.png?raw=true)
+### Install
 
-See https://adventofcode.com/2022 for problems.
+```console
+make
+```
+
+### Build
+
+```console
+make build
+```
+
+### Run
+
+> `day` is an argument. Pass a valid value in the format `01`, `08`, `12`, `25`, etc., which corresponds to one of 25 days
+
+```console
+make run day=01
+```
+
+### Reference
+
+https://adventofcode.com/2022

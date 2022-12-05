@@ -1,12 +1,18 @@
 {
   "name": "aoc-2022",
-  "version": "0.0.1",
-  "description": "Solving Advent of Code 2022 in JavaScript",
+  "version": "0.2.0",
+  "description": "Solving Advent of Code 2022 in TypeScript",
   "author": "Roman Hnatiuk <hnatiukr@pm.me>",
   "homepage": "https://github.com/hnatiukr/aoc-2022#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hnatiukr/aoc-2022.git"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "18.11.10",
+    "copyfiles": "2.4.1",
+    "rimraf": "3.0.2",
+    "typescript": "4.9.3"
+  }
 }
