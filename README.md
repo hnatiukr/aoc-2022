@@ -21,7 +21,7 @@
 @#@@@@@##@@#@@@##@#@@@@#@###@#@@#@#@@@@#@###@####  10
 @@@##@@@@@@@@@@@#@@#@@@##@@#@@@##@#@#@@@##@##@#@#   9
 #@@#@##@@@###@@#@@@#@@@#@@#@#@@@@@#@@@#@@@#@@#@@@   8
-@#@@@@@##@@#@@@#@@###@@@@#@#@@@@@###@##@#@@@#@@@@   7
+@#@#@#@@#@@.~~.@@@@@@@@#.@@@#@@@@@@##@@#@@@#@@@#@   7
 #@##@@@#@#@@.~~.@@@@@#@..@##@@#@#@@@@@###@@@#@#@@   6
 @@#@@@@##@#@@.~~.#@./\\.'@#@@#@@@@###@@#@@##@@@#@   5
 @####@@@##@.' ~  './\\'./\\' .@@###@@@@@@@#@#@@@@   4
@@ -30,16 +30,81 @@
   ~    ~  ~      ~     ~ ~   ~     ~  ~  ~   ~      1
 ```
 
-### Install and Run
+https://adventofcode.com/2022
 
-> `day` is an argument. Pass a valid value in the format `01`, `08`, `12`, `25`, etc., which corresponds to one of 25 days
+### Installation
 
 ```console
 make
 make build
-make run day=01
 ```
 
-### Reference
+## Day 01: Calorie Counting
 
-https://adventofcode.com/2022
+[Full Description](https://github.com/hnatiukr/aoc-2022/tree/main/day/01)
+
+``` console
+make run day=01
+72511
+212117
+```
+
+## Day 02: Rock Paper Scissors
+
+[Full Description](https://github.com/hnatiukr/aoc-2022/tree/main/day/02)
+
+``` console
+make run day=02
+14069
+12411
+```
+
+## Day 03: Rucksack Reorganization
+
+[Full Description](https://github.com/hnatiukr/aoc-2022/tree/main/day/03)
+
+``` console
+make run day=03
+7848
+2616
+```
+
+## Day 03: Camp Cleanup
+
+[Full Description](https://github.com/hnatiukr/aoc-2022/tree/main/day/04)
+
+``` console
+make run day=04
+431
+823
+```
+
+## Day 05: Supply Stacks
+
+[Full Description](https://github.com/hnatiukr/aoc-2022/tree/main/day/05)
+
+``` console
+make run day=05
+JCMHLVGMG
+LVMRWSSPZ
+```
+
+## Day 05: Tuning Trouble
+
+[Full Description](https://github.com/hnatiukr/aoc-2022/tree/main/day/06)
+
+``` console
+make run day=06
+1833
+3425
+```
+
+## Day 07: No Space Left On Device
+
+[Full Description](https://github.com/hnatiukr/aoc-2022/tree/main/day/07)
+
+``` console
+make run day=07
+1642503
+6999588
+```
