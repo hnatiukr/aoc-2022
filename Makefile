@@ -2,6 +2,7 @@ install:
 	npm ci
 
 build:
+	npx prettier --write .
 	rm -rf build
 	npx tsc
 	npx copyfiles --up 1 --all ./day/**/input.txt build/day
