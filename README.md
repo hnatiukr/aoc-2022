@@ -20,7 +20,7 @@
 @#@@@@@@@@@@@#@@@#@@@@@##@@@@@@#@@#@##@@@@###@@@#  11
 @#@@@@@##@@#@@@##@#@@@@#@###@#@@#@#@@@@#@###@####  10
 @@@##@@@@@@@@@@@#@@#@@@##@@#@@@##@#@#@@@##@##@#@#   9
-#@@#@##@@@###@@#@@@#@@@#@@#@#@@@@@#@@@#@@@#@@#@@@   8
+#@@#@../  \\.~~./  \\.....#@#@@@@@@@@@@#@@@@@#@@@   8
 @#@#@#@@#@@.~~.@@@@@@@@#.@@@#@@@@@@##@@#@@@#@@@#@   7
 #@##@@@#@#@@.~~.@@@@@#@..@##@@#@#@@@@@###@@@#@#@@   6
 @@#@@@@##@#@@.~~.#@./\\.'@#@@#@@@@###@@#@@##@@@#@   5
@@ -43,7 +43,7 @@ make build
 
 [Full Description](https://github.com/hnatiukr/aoc-2022/tree/main/day/01)
 
-``` console
+```console
 make run day=01
 72511
 212117
@@ -53,7 +53,7 @@ make run day=01
 
 [Full Description](https://github.com/hnatiukr/aoc-2022/tree/main/day/02)
 
-``` console
+```console
 make run day=02
 14069
 12411
@@ -63,7 +63,7 @@ make run day=02
 
 [Full Description](https://github.com/hnatiukr/aoc-2022/tree/main/day/03)
 
-``` console
+```console
 make run day=03
 7848
 2616
@@ -73,7 +73,7 @@ make run day=03
 
 [Full Description](https://github.com/hnatiukr/aoc-2022/tree/main/day/04)
 
-``` console
+```console
 make run day=04
 431
 823
@@ -83,7 +83,7 @@ make run day=04
 
 [Full Description](https://github.com/hnatiukr/aoc-2022/tree/main/day/05)
 
-``` console
+```console
 make run day=05
 JCMHLVGMG
 LVMRWSSPZ
@@ -93,7 +93,7 @@ LVMRWSSPZ
 
 [Full Description](https://github.com/hnatiukr/aoc-2022/tree/main/day/06)
 
-``` console
+```console
 make run day=06
 1833
 3425
@@ -103,8 +103,18 @@ make run day=06
 
 [Full Description](https://github.com/hnatiukr/aoc-2022/tree/main/day/07)
 
-``` console
+```console
 make run day=07
 1642503
 6999588
+```
+
+## Day 08: Treetop Tree House
+
+[Full Description](https://github.com/hnatiukr/aoc-2022/tree/main/day/08)
+
+```console
+make run day=08
+1845
+230112
 ```
