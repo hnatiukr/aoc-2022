@@ -1,6 +1,7 @@
 # Solving AoC 2022 problems in TypeScript
 
 [![Node.js CI](https://github.com/hnatiukr/aoc-2022/actions/workflows/node.js.yml/badge.svg)](https://github.com/hnatiukr/aoc-2022/actions/workflows/node.js.yml)
+[![AoC 2022 Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/hnatiukr/aoc-2022/main/.github/badges/2022.json)](/day/)
 
 ```console
 ##@@#@#@@##@@@@@@#@#@@@#@@@@@@@@@@#@@@@@@@#@@#@@#  25
