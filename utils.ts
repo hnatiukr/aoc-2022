@@ -2,14 +2,20 @@ import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { resolve, dirname } from 'path';
 
-export const readInput = (day: string): string[] => {
+type Format = 'lines' | 'plain';
+
+export const readInput = (day: string, format?: Format): string[] | string => {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = dirname(__filename);
 
     const dirPath = `${__dirname}/day/${day}`;
-    const input = readFileSync(resolve(dirPath, 'input.txt'), 'utf-8');
+    const input = readFileSync(resolve(dirPath, 'input.txt'), 'utf-8').replace(/\r/g, '').trim();
 
-    return input.replace(/\r/g, '').trim().split('\n');
+    if (format === 'plain') {
+        return input;
+    }
+
+    return input.split('\n');
 };
 
 export const match = (value: string): (<Value>(matchers: Record<string, () => Value>) => Value) => {
