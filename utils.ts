@@ -4,7 +4,9 @@ import { resolve, dirname } from 'path';
 
 type Format = 'lines' | 'plain';
 
-export const readInput = (day: string, format?: Format): string[] | string => {
+export function readInput(day: string): string[];
+export function readInput(day: string, format: Format): string;
+export function readInput(day: string, format?: Format): string[] | string {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = dirname(__filename);
 
@@ -16,7 +18,7 @@ export const readInput = (day: string, format?: Format): string[] | string => {
     }
 
     return input.split('\n');
-};
+}
 
 export const match = (value: string): (<Value>(matchers: Record<string, () => Value>) => Value) => {
     return (matchers) => {
